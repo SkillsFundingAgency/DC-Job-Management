@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>ESFA.DC.JobQueueManager.Interfaces</AssemblyName>
+    <RootNamespace>ESFA.DC.JobQueueManager.Interfaces</RootNamespace>
+    <CodeAnalysisRuleSet>..\ESFA.DC.JobManagement.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
+    <PackageReference Include="ESFA.DC.Api.Common" Version="0.1.0" />
+    <PackageReference Include="ESFA.DC.JobContext.Interface" Version="0.1.16-beta0001" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DC.JobQueueManager.Data\ESFA.DC.JobQueueManager.Data.csproj" />
+    <ProjectReference Include="..\ESFA.DC.CollectionsManagement.Models\ESFA.DC.CollectionsManagement.Models.csproj" />
+    <ProjectReference Include="..\ESFA.DC.Jobs.Model\ESFA.DC.Jobs.Model.csproj" />
+  </ItemGroup>
+
+</Project>
