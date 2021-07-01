@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>ESFA.DC.JobQueueManager</AssemblyName>
+    <RootNamespace>ESFA.DC.JobQueueManager</RootNamespace>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>0.1.82</Version>
+    <Authors>DC</Authors>
+    <Company>ESFA</Company>
+    <Description>Implementation of Job Queue Manager</Description>
+    <Copyright>Copyright 2018</Copyright>
+    <PackageLicenseUrl>https://github.com/SkillsFundingAgency/DC-JobQueueManager/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/SkillsFundingAgency/DC-JobQueueManager</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/SkillsFundingAgency/DC-JobQueueManager</RepositoryUrl>
+    <PackageTags>Job Queue Manager ESFA</PackageTags>
+    <CodeAnalysisRuleSet>..\ESFA.DC.JobManagement.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="JobsQueuedService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ESFA.DC.Api.Common" Version="0.1.0" />
+    <PackageReference Include="ESFA.DC.Data.Organisations.Model" Version="0.2.0-alpha0014" />
+    <PackageReference Include="ESFA.DC.DateTimeProvider.Interface" Version="0.1.6-beta0001" />
+    <PackageReference Include="ESFA.DC.ILR.2021.Database.EF" Version="0.1.122" />
+    <PackageReference Include="ESFA.DC.ILR.2122.Database.EF" Version="0.1.3" />
+    <PackageReference Include="ESFA.DC.ILR1819.Database.EF" Version="0.1.381" />
+    <PackageReference Include="ESFA.DC.ILR1920.Database.EF" Version="0.0.551" />
+    <PackageReference Include="ESFA.DC.JobContext" Version="0.1.16-beta0001" />
+    <PackageReference Include="ESFA.DC.JobContext.Interface" Version="0.1.16-beta0001" />
+    <PackageReference Include="ESFA.DC.Logging" Version="0.1.10-beta0001" />
+    <PackageReference Include="ESFA.DC.PIMS.EF" Version="0.2.2-beta0001" />
+    <PackageReference Include="ESFA.DC.Queueing.Interface" Version="0.1.14-beta0001" />
+    <PackageReference Include="ESFA.DC.ReferenceData.ValidationMessages.EF.Model" Version="0.2.1261" />
+    <PackageReference Include="ESFA.DC.Serialization.Json" Version="0.1.6-beta0001" />
+    <PackageReference Include="GovukNotify" Version="4.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+
+    <PackageReference Include="morelinq" Version="3.2.0" />
+    <PackageReference Include="Dapper" Version="2.0.30" />
+      <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DC.JobQueueManager.Data\ESFA.DC.JobQueueManager.Data.csproj">
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\DC.JobQueueManager.Interfaces\ESFA.DC.JobQueueManager.Interfaces.csproj">
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\ESFA.DC.Audit.Models\ESFA.DC.Audit.Models.csproj" />
+    <ProjectReference Include="..\ESFA.DC.CollectionsManagement.Models\ESFA.DC.CollectionsManagement.Models.csproj" />
+    <ProjectReference Include="..\ESFA.DC.JobManagement.Constants\ESFA.DC.JobManagement.Constants.csproj" />
+    <ProjectReference Include="..\ESFA.DC.JobNotifications\ESFA.DC.JobNotifications.csproj">
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\ESFA.DC.JobScheduler.Settings\ESFA.DC.JobScheduler.Settings.csproj" />
+    <ProjectReference Include="..\ESFA.DC.PeriodEnd.Interfaces\ESFA.DC.PeriodEnd.Interfaces.csproj" />
+       
+  </ItemGroup>
+
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
+</Project>

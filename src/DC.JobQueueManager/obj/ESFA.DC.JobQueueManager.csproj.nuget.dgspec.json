@@ -1,0 +1,1037 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager\\ESFA.DC.JobQueueManager.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Data\\ESFA.DC.JobQueueManager.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Data\\ESFA.DC.JobQueueManager.Data.csproj",
+        "projectName": "ESFA.DC.JobQueueManager.Data",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Data\\ESFA.DC.JobQueueManager.Data.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.30, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Interfaces\\ESFA.DC.JobQueueManager.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Interfaces\\ESFA.DC.JobQueueManager.Interfaces.csproj",
+        "projectName": "ESFA.DC.JobQueueManager.Interfaces",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Interfaces\\ESFA.DC.JobQueueManager.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Data\\ESFA.DC.JobQueueManager.Data.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Data\\ESFA.DC.JobQueueManager.Data.csproj"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.CollectionsManagement.Models\\ESFA.DC.CollectionsManagement.Models.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.CollectionsManagement.Models\\ESFA.DC.CollectionsManagement.Models.csproj"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Jobs.Model\\ESFA.DC.Jobs.Model.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Jobs.Model\\ESFA.DC.Jobs.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[4.9.4, )"
+            },
+            "ESFA.DC.Api.Common": {
+              "target": "Package",
+              "version": "[0.1.0, )"
+            },
+            "ESFA.DC.JobContext.Interface": {
+              "target": "Package",
+              "version": "[0.1.16-beta0001, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager\\ESFA.DC.JobQueueManager.csproj": {
+      "version": "0.1.82",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager\\ESFA.DC.JobQueueManager.csproj",
+        "projectName": "ESFA.DC.JobQueueManager",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager\\ESFA.DC.JobQueueManager.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Data\\ESFA.DC.JobQueueManager.Data.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Data\\ESFA.DC.JobQueueManager.Data.csproj",
+                "privateAssets": "all"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Interfaces\\ESFA.DC.JobQueueManager.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Interfaces\\ESFA.DC.JobQueueManager.Interfaces.csproj",
+                "privateAssets": "all"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Audit.Models\\ESFA.DC.Audit.Models.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Audit.Models\\ESFA.DC.Audit.Models.csproj"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.CollectionsManagement.Models\\ESFA.DC.CollectionsManagement.Models.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.CollectionsManagement.Models\\ESFA.DC.CollectionsManagement.Models.csproj"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobManagement.Constants\\ESFA.DC.JobManagement.Constants.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobManagement.Constants\\ESFA.DC.JobManagement.Constants.csproj"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobNotifications\\ESFA.DC.JobNotifications.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobNotifications\\ESFA.DC.JobNotifications.csproj",
+                "privateAssets": "all"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobScheduler.Settings\\ESFA.DC.JobScheduler.Settings.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobScheduler.Settings\\ESFA.DC.JobScheduler.Settings.csproj"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Interfaces\\ESFA.DC.PeriodEnd.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Interfaces\\ESFA.DC.PeriodEnd.Interfaces.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.30, )"
+            },
+            "ESFA.DC.Api.Common": {
+              "target": "Package",
+              "version": "[0.1.0, )"
+            },
+            "ESFA.DC.Data.Organisations.Model": {
+              "target": "Package",
+              "version": "[0.2.0-alpha0014, )"
+            },
+            "ESFA.DC.DateTimeProvider.Interface": {
+              "target": "Package",
+              "version": "[0.1.6-beta0001, )"
+            },
+            "ESFA.DC.ILR.2021.Database.EF": {
+              "target": "Package",
+              "version": "[0.1.122, )"
+            },
+            "ESFA.DC.ILR.2122.Database.EF": {
+              "target": "Package",
+              "version": "[0.1.3, )"
+            },
+            "ESFA.DC.ILR1819.Database.EF": {
+              "target": "Package",
+              "version": "[0.1.381, )"
+            },
+            "ESFA.DC.ILR1920.Database.EF": {
+              "target": "Package",
+              "version": "[0.0.551, )"
+            },
+            "ESFA.DC.JobContext": {
+              "target": "Package",
+              "version": "[0.1.16-beta0001, )"
+            },
+            "ESFA.DC.JobContext.Interface": {
+              "target": "Package",
+              "version": "[0.1.16-beta0001, )"
+            },
+            "ESFA.DC.Logging": {
+              "target": "Package",
+              "version": "[0.1.10-beta0001, )"
+            },
+            "ESFA.DC.PIMS.EF": {
+              "target": "Package",
+              "version": "[0.2.2-beta0001, )"
+            },
+            "ESFA.DC.Queueing.Interface": {
+              "target": "Package",
+              "version": "[0.1.14-beta0001, )"
+            },
+            "ESFA.DC.ReferenceData.ValidationMessages.EF.Model": {
+              "target": "Package",
+              "version": "[0.2.1261, )"
+            },
+            "ESFA.DC.Serialization.Json": {
+              "target": "Package",
+              "version": "[0.1.6-beta0001, )"
+            },
+            "GovukNotify": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
+            "morelinq": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Audit.Models\\ESFA.DC.Audit.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Audit.Models\\ESFA.DC.Audit.Models.csproj",
+        "projectName": "ESFA.DC.Audit.Models",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Audit.Models\\ESFA.DC.Audit.Models.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Audit.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Data\\ESFA.DC.JobQueueManager.Data.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\DC.JobQueueManager.Data\\ESFA.DC.JobQueueManager.Data.csproj"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.EmailDistribution.Models\\ESFA.DC.EmailDistribution.Models.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.EmailDistribution.Models\\ESFA.DC.EmailDistribution.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.CollectionsManagement.Models\\ESFA.DC.CollectionsManagement.Models.csproj": {
+      "version": "0.5.3",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.CollectionsManagement.Models\\ESFA.DC.CollectionsManagement.Models.csproj",
+        "projectName": "ESFA.DC.CollectionsManagement.Models",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.CollectionsManagement.Models\\ESFA.DC.CollectionsManagement.Models.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.CollectionsManagement.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.EmailDistribution.Models\\ESFA.DC.EmailDistribution.Models.csproj": {
+      "version": "1.0.4",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.EmailDistribution.Models\\ESFA.DC.EmailDistribution.Models.csproj",
+        "projectName": "ESFA.DC.EmailDistribution.Models",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.EmailDistribution.Models\\ESFA.DC.EmailDistribution.Models.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.EmailDistribution.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobManagement.Constants\\ESFA.DC.JobManagement.Constants.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobManagement.Constants\\ESFA.DC.JobManagement.Constants.csproj",
+        "projectName": "ESFA.DC.JobManagement.Constants",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobManagement.Constants\\ESFA.DC.JobManagement.Constants.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobManagement.Constants\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobNotifications\\ESFA.DC.JobNotifications.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobNotifications\\ESFA.DC.JobNotifications.csproj",
+        "projectName": "ESFA.DC.JobNotifications",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobNotifications\\ESFA.DC.JobNotifications.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobNotifications\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "GovukNotify": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Jobs.Model\\ESFA.DC.Jobs.Model.csproj": {
+      "version": "0.4.5",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Jobs.Model\\ESFA.DC.Jobs.Model.csproj",
+        "projectName": "ESFA.DC.Jobs.Model",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Jobs.Model\\ESFA.DC.Jobs.Model.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Jobs.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobScheduler.Settings\\ESFA.DC.JobScheduler.Settings.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobScheduler.Settings\\ESFA.DC.JobScheduler.Settings.csproj",
+        "projectName": "ESFA.DC.JobScheduler.Settings",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobScheduler.Settings\\ESFA.DC.JobScheduler.Settings.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobScheduler.Settings\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobNotifications\\ESFA.DC.JobNotifications.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobNotifications\\ESFA.DC.JobNotifications.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "ESFA.DC.Queueing.Interface": {
+              "target": "Package",
+              "version": "[0.1.14-beta0001, )"
+            },
+            "Microsoft.VisualStudio.Threading.Analyzers": {
+              "target": "Package",
+              "version": "[16.0.102, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Interfaces\\ESFA.DC.PeriodEnd.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Interfaces\\ESFA.DC.PeriodEnd.Interfaces.csproj",
+        "projectName": "ESFA.DC.PeriodEnd.Interfaces",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Interfaces\\ESFA.DC.PeriodEnd.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.CollectionsManagement.Models\\ESFA.DC.CollectionsManagement.Models.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.CollectionsManagement.Models\\ESFA.DC.CollectionsManagement.Models.csproj"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.EmailDistribution.Models\\ESFA.DC.EmailDistribution.Models.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.EmailDistribution.Models\\ESFA.DC.EmailDistribution.Models.csproj"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Jobs.Model\\ESFA.DC.Jobs.Model.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Jobs.Model\\ESFA.DC.Jobs.Model.csproj"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Models\\ESFA.DC.PeriodEnd.Models.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Models\\ESFA.DC.PeriodEnd.Models.csproj"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Utils\\ESFA.DC.PeriodEnd.Utils.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Utils\\ESFA.DC.PeriodEnd.Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "ESFA.DC.IO.AzureStorage": {
+              "target": "Package",
+              "version": "[0.1.21-beta0001, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Models\\ESFA.DC.PeriodEnd.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Models\\ESFA.DC.PeriodEnd.Models.csproj",
+        "projectName": "ESFA.DC.PeriodEnd.Models",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Models\\ESFA.DC.PeriodEnd.Models.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Jobs.Model\\ESFA.DC.Jobs.Model.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Jobs.Model\\ESFA.DC.Jobs.Model.csproj"
+              },
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Utils\\ESFA.DC.PeriodEnd.Utils.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Utils\\ESFA.DC.PeriodEnd.Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Utils\\ESFA.DC.PeriodEnd.Utils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Utils\\ESFA.DC.PeriodEnd.Utils.csproj",
+        "projectName": "ESFA.DC.PeriodEnd.Utils",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Utils\\ESFA.DC.PeriodEnd.Utils.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.PeriodEnd.Utils\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Jobs.Model\\ESFA.DC.Jobs.Model.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Jobs.Model\\ESFA.DC.Jobs.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
