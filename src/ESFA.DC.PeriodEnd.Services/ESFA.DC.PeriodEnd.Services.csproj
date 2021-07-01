@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <CodeAnalysisRuleSet>..\ESFA.DC.JobManagement.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Validation\**" />
+    <EmbeddedResource Remove="Validation\**" />
+    <None Remove="Validation\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ESFA.DC.Data.Organisations.Model" Version="0.2.0-alpha0014" />
+    <PackageReference Include="ESFA.DC.DateTimeProvider.Interface" Version="0.1.6-beta0001" />
+    <PackageReference Include="ESFA.DC.FileService.Interface" Version="0.1.20-beta0001" />
+    <PackageReference Include="ESFA.DC.IO.AzureStorage" Version="0.1.21-beta0001" />
+    <PackageReference Include="ESFA.DC.Logging" Version="0.1.10-beta0001" />
+    <PackageReference Include="ESFA.DC.Serialization.Json" Version="0.1.6-beta0001" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DC.JobQueueManager.Interfaces\ESFA.DC.JobQueueManager.Interfaces.csproj" />
+    <ProjectReference Include="..\ESFA.DC.Audit.Models\ESFA.DC.Audit.Models.csproj" />
+    <ProjectReference Include="..\ESFA.DC.JobManagement.Constants\ESFA.DC.JobManagement.Constants.csproj" />
+    <ProjectReference Include="..\ESFA.DC.JobNotifications\ESFA.DC.JobNotifications.csproj" />
+    <ProjectReference Include="..\ESFA.DC.PeriodEnd.Interfaces\ESFA.DC.PeriodEnd.Interfaces.csproj" />
+    <ProjectReference Include="..\ESFA.DC.PeriodEnd.Models\ESFA.DC.PeriodEnd.Models.csproj" />
+    <ProjectReference Include="..\ESFA.DC.PeriodEnd.Utils\ESFA.DC.PeriodEnd.Utils.csproj" />
+  </ItemGroup>
+
+</Project>
