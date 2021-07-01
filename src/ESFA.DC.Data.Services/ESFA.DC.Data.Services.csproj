@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <CodeAnalysisRuleSet>..\ESFA.DC.JobManagement.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ESFA.DC.DateTimeProvider.Interface" Version="0.1.6-beta0001" />
+    <PackageReference Include="ESFA.DC.ILR.2021.Database.EF" Version="0.1.122" />
+    <PackageReference Include="ESFA.DC.ILR.2122.Database.EF" Version="0.1.3" />
+    <PackageReference Include="ESFA.DC.ILR.ValidationErrors.Interface" Version="0.1.6-beta0001" />
+    <PackageReference Include="ESFA.DC.ILR1819.Database.EF" Version="0.1.381" />
+    <PackageReference Include="ESFA.DC.ILR1920.Database.EF" Version="0.0.551" />
+    <PackageReference Include="ESFA.DC.Logging.Interfaces" Version="0.1.10-beta0001" />
+    <PackageReference Include="ESFA.DC.Summarisation.Model" Version="0.0.686" />
+    <PackageReference Include="JWT" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ESFA.DC.Data.Models\ESFA.DC.Data.Models.csproj" />
+    <ProjectReference Include="..\ESFA.DC.PeriodEnd.Interfaces\ESFA.DC.PeriodEnd.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
