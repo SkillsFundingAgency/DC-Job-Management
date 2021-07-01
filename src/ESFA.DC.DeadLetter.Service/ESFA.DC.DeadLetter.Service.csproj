@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <CodeAnalysisRuleSet>..\ESFA.DC.JobManagement.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ESFA.DC.Auditing.Interface" Version="0.2.0-beta0001" />
+    <PackageReference Include="ESFA.DC.JobContext" Version="0.1.16-beta0001" />
+    <PackageReference Include="ESFA.DC.Logging" Version="0.1.12-beta0001" />
+    <PackageReference Include="ESFA.DC.Queueing" Version="0.1.22-beta0001" />
+    <PackageReference Include="ESFA.DC.Serialization.Json" Version="0.1.48-beta0001" />
+    <PackageReference Include="GovukNotify" Version="4.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ESFA.DC.Jobs.Model\ESFA.DC.Jobs.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="privatesettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Settings.job">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
