@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ESFA.DC.JobQueueManager.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{f47d5346-f204-445a-a624-4e9934457c77}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DC.JobQueueManager.Database</RootNamespace>
+    <AssemblyName>DC.JobQueueManager.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <CompatibilityMode>140</CompatibilityMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="zzDeploymentProfiles" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="Security\" />
+    <Folder Include="ReferenceData" />
+    <Folder Include="dbo\Views" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="DBRefactor" />
+    <Folder Include="PeriodEnd" />
+    <Folder Include="PeriodEnd\Tables" />
+    <Folder Include="PeriodEnd\Stored Procedures" />
+    <Folder Include="Collections_ReferenceData" />
+    <Folder Include="Collections_ReferenceData\Pre\" />
+    <Folder Include="Collections_ReferenceData\Post" />
+    <Folder Include="Collections_ReferenceData\Scripts" />
+    <Folder Include="Collections_ReferenceData\Overrides" />
+    <Folder Include="Migration" />
+    <Folder Include="ServiceMessage" />
+    <Folder Include="DCFTMigration" />
+    <Folder Include="DCFTMigration\Stored Procedures" />
+    <Folder Include="DCFTMigration\Tables" />
+    <Folder Include="Reminder" />
+    <Folder Include="Reminder\Tables" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Job.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobByPriority.sql" />
+    <Build Include="Security\JobQueueManagerApiUser.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Tables\FileUploadJobMetaData.sql" />
+    <Build Include="Security\JobQueueManagerSchedulerUser.sql" />
+    <Build Include="dbo\Tables\JobStatusType.sql" />
+    <Build Include="dbo\Tables\JobEmailTemplate.sql" />
+    <Build Include="dbo\Tables\Collection.sql" />
+    <Build Include="dbo\Tables\CollectionType.sql" />
+    <Build Include="dbo\Tables\Organisation.sql" />
+    <Build Include="dbo\Tables\OrganisationCollection.sql" />
+    <Build Include="dbo\Tables\ReturnPeriod.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Add_UKPRN_to_Collection.sql" />
+    <Build Include="dbo\Views\vw_CurrentCollectionReturnPeriods.sql" />
+    <None Include="ReferenceData\CollectionType.sql" />
+    <Build Include="Security\JobManagementSchedulerUser.sql" />
+    <Build Include="Security\JobManagementApiUser.sql" />
+    <Build Include="dbo\Tables\Schedule.sql" />
+    <Build Include="dbo\Functions\CanProcessJob.sql" />
+    <None Include="__Add.Multiple.UKPRN.to.Collection.sql" />
+    <Build Include="dbo\Views\vw_JobInfo.sql" />
+    <Build Include="Security\Role_DataViewer.sql" />
+    <Build Include="Security\User_DsciUser.sql" />
+    <Build Include="Security\User_RO.sql" />
+    <Build Include="Security\Role_DataProcessor.sql" />
+    <Build Include="dbo\Views\vw_OrganisationCollectionAssignment.sql" />
+    <Build Include="dbo\Stored Procedures\usp_DisplayDeploymentProperties.sql" />
+    <Build Include="dbo\Tables\JobSubscriptionTask.sql" />
+    <Build Include="dbo\Tables\JobTopicSubscription.sql" />
+    <Build Include="dbo\Views\vw_DisplayJobTaskList.sql" />
+    <Build Include="dbo\Views\vw_JobSchedules.sql" />
+    <Build Include="dbo\Stored Procedures\GetRetriedJobs.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobs.sql" />
+    <Build Include="dbo\Tables\NcsJobMetaData.sql" />
+    <Build Include="dbo\Stored Procedures\GetLatestJobPerPeriod.sql" />
+    <Build Include="dbo\Stored Procedures\GetLatestJobs.sql" />
+    <Build Include="dbo\Views\vw_CurrentOpenCollections.sql" />
+    <Build Include="dbo\Views\vw_ProviderSubmissions.sql" />
+    <Build Include="dbo\Tables\ServiceMessage.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Disable_UKPRN_in_Collection.sql" />
+    <Build Include="dbo\Tables\ReturnPeriodDisplayOverride.sql" />
+    <Build Include="dbo\Tables\IlrJobMetaData.sql" />
+    <Build Include="dbo\Tables\EasJobMetaData.sql" />
+    <Build Include="dbo\Tables\ReturnPeriodOrganisationOverride.sql" />
+    <Build Include="dbo\Views\ReadOnlyJob.sql" />
+    <Build Include="dbo\Tables\JobMessageKey.sql" />
+    <Build Include="dbo\Stored Procedures\GetNonSubmittingProviders.sql" />
+    <Build Include="PeriodEnd\Tables\Path.sql" />
+    <Build Include="PeriodEnd\Tables\PathItem.sql" />
+    <Build Include="PeriodEnd\Tables\PathItemJob.sql" />
+    <Build Include="PeriodEnd\Tables\PeriodEnd.sql" />
+    <Build Include="Security\PeriodEnd.sql" />
+    <Build Include="PeriodEnd\Stored Procedures\PeriodEndClearDown.sql" />
+    <Build Include="dbo\Stored Procedures\GetSubmittingProviders.sql" />
+    <Build Include="dbo\Stored Procedures\GetUnSubmittedIlrJobs.sql" />
+    <Build Include="dbo\Stored Procedures\GetLatestFailedJobsPerCollectionPerPeriod.sql" />
+    <Build Include="dbo\Tables\MCADetail.sql" />
+    <None Include="ReferenceData\MCADetail.sql" />
+    <Build Include="dbo\Tables\ServiceBusMessageLog.sql" />
+    <Build Include="PeriodEnd\Tables\ValidityPeriod.sql" />
+    <Build Include="PeriodEnd\Tables\Email.sql" />
+    <Build Include="PeriodEnd\Tables\RecipientGroup.sql" />
+    <Build Include="PeriodEnd\Tables\Recipient.sql" />
+    <Build Include="PeriodEnd\Tables\EmailRecipientGroup.sql" />
+    <Build Include="PeriodEnd\Tables\RecipientGroupRecipient.sql" />
+    <Build Include="Security\Mailing.sql" />
+    <None Include="ReferenceData\PeriodEndEmailTemplates.sql" />
+    <Build Include="dbo\Stored Procedures\GetLatestSubmittedJobs.sql" />
+    <Build Include="PeriodEnd\Tables\EmailValidityPeriod.sql" />
+    <None Include="ReferenceData\EmailValidityPeriods.sql" />
+    <Build Include="dbo\Tables\EsfJobMetaData.sql" />
+    <Build Include="dbo\Tables\ReportsPublicationJobMetaData.sql" />
+    <Build Include="dbo\Stored Procedures\Dashboard.sql" />
+    <Build Include="PeriodEnd\Stored Procedures\GetPeriodEndJobs.sql" />
+    <Build Include="dbo\Tables\ValidationRuleDetailsReportJobMetaData.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobsThatAreProcessing.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobsThatAreSubmitted.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobsThatAreFailedToday.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobsThatAreSlowFiles.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobsThatAreConcern.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobConcernsPerCollectionPerPeriod.sql" />
+    <Build Include="dbo\Tables\Covid19ReliefReviewComment.sql" />
+    <Build Include="dbo\Tables\Covid19ReliefSubmission.sql" />
+    <Build Include="dbo\Tables\Covid19ReliefQuestion.sql" />
+    <Build Include="dbo\Stored Procedures\SubmitJobCreateIlrJobMetaData.sql" />
+    <Build Include="dbo\Stored Procedures\GetIlrJobsSuccessfulInPeriod.sql" />
+    <Build Include="dbo\Stored Procedures\GetNCSLatestFailedJobsPerCollectionPerPeriod.sql" />
+    <Build Include="dbo\Stored Procedures\GetAllSuccessfulJobsPerCollectionTypePerPeriod.sql" />
+    <Build Include="dbo\Stored Procedures\GetSldToDasMismatchDrillDown.sql" />
+    <Build Include="dbo\Stored Procedures\GetFailedFilesCurrentPeriod.sql" />
+    <Build Include="dbo\Stored Procedures\GetProvidersReturnedCurrentPeriod.sql" />
+    <Build Include="dbo\Tables\Covid19ReliefAEBMonthlyCap.sql" />
+    <Build Include="dbo\Tables\Covid19ReliefNLAppsMonthlyCap.sql" />
+    <Build Include="dbo\Tables\CollectionRelatedLinks.sql" />
+    <Build Include="dbo\Tables\CovidReliefPayment.sql" />
+    <Build Include="dbo\Stored Procedures\SetPathIsBusy.sql" />
+    <None Include="ReferenceData\DeleteUnwanted.sql" />
+    <None Include="ReferenceData\DisablePublishToBAUTasks.sql" />
+    <None Include="ReferenceData\DisableNCSPeriodEndTasks.sql" />
+    <None Include="DBRefactor\Remove_FundingClaimsTables.sql" />
+    <Build Include="dbo\Stored Procedures\GetIlrProvidersReturningFirstTimePerDay.sql" />
+    <None Include="DBRefactor\Update_ReportsPublished_FrmReports.sql" />
+    <Build Include="dbo\Stored Procedures\GetILRSubmissionsPerDay.sql" />
+    <Build Include="dbo\Tables\ApiAvailability.sql" />
+    <None Include="ReferenceData\ApiAvailability.sql" />
+    <Build Include="PeriodEnd\Tables\SubPathValidityPeriod.sql" />
+    <None Include="ReferenceData\SubPathValidityPeriods.sql" />
+    <None Include="Collections_ReferenceData\Post\Merge_Collection.sql" />
+    <None Include="Collections_ReferenceData\Post\Merge_JobTopicTaskSubscription.sql" />
+    <None Include="Collections_ReferenceData\Post\Merge_ReturnPeriod.sql" />
+    <None Include="Collections_ReferenceData\Post\Merge_JobEmailTemplate.sql" />
+    <None Include="Collections_ReferenceData\Post\Merge_CollectionRelatedLink.sql" />
+    <None Include="Collections_ReferenceData\Post\Merge_JobMessageKey.sql" />
+    <None Include="Collections_ReferenceData\Post\Merge_ValidityPeriods.sql" />
+    <None Include="ReferenceData\ALLFEmailValidityPeriods.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\NcsOutcomeRates.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobsThatAreProcessingDetailCurrentPeriod.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobsThatAreProcessingDetailCurrentPeriodLast5Mins.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobsThatAreProcessingDetailCurrentPeriodLastHour.sql" />
+    <Build Include="dbo\Tables\ReportsArchive.sql" />
+    <Build Include="PeriodEnd\Stored Procedures\UpdateValidityPeriods.sql" />
+    <None Include="zzCollectionsDataScript.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\DevolvedPostcodesPublication.sql" />
+    <Build Include="dbo\Stored Procedures\GetOpenPeriods.sql" />
+    <Build Include="dbo\Functions\IsPeriodEndCollectionType.sql" />
+    <Build Include="dbo\Stored Procedures\GetLatestDASSubmittedJobs.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\2021-MidYear.sql" />
+    <Build Include="dbo\Stored Procedures\BulkAddProviders.sql" />
+    <Build Include="dbo\Stored Procedures\BulkAddProviderCollections.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-2021-MidYear-FundingClaimsDataExtract-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-2021-MidYear-FundingClaimsProviderSubmission-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-2021-MidYear-FundingClaimsSavedButNotSubmitted-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-2021-YearEnd-FundingClaimsDataExtract-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-2021-YearEnd-FundingClaimsSavedButNotSubmitted-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-2021-YearEnd_FC_ProvSubReport.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\REF-EDRS.sql" />
+    <Build Include="dbo\Tables\FisJobMetaData.sql" />
+    <Build Include="dbo\Tables\Migration.sql" />
+    <None Include="Migration\Update_Collection_EmailOnJobCreation.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\NCS2122.sql" />
+    <Build Include="dbo\Stored Procedures\GetProviderStatus.sql" />
+    <Build Include="ServiceMessage\ServiceMessage.sql" />
+    <Build Include="Security\ServiceMessage.sql" />
+    <Build Include="ServiceMessage\ServicePageMessage.sql" />
+    <Build Include="ServiceMessage\ServicePage.sql" />
+    <None Include="Migration\Update_ServicePages.sql" />
+    <None Include="Migration\Remove_LarsJobSubscriptionTask.sql" />
+    <None Include="Migration\Migrate_ServicePages.sql" />
+    <None Include="Migration\Remove_Recipient_Duplicates.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\FEW2021.sql" />
+    <Build Include="DCFTMigration\Stored Procedures\sp_BackupReportsArchive.sql" />
+    <Build Include="DCFTMigration\Stored Procedures\sp_MergeReportsArchive.sql" />
+    <Build Include="DCFTMigration\Tables\ReportsArchive_Backup.sql" />
+    <Build Include="DCFTMigration\Tables\ReportsArchive_Staging.sql" />
+    <Build Include="Security\DCFTMigration.sql" />
+    <Build Include="Reminder\Tables\Reminder.sql" />
+    <Build Include="Security\Reminder.sql" />
+    <Build Include="Reminder\Tables\ReminderCertificate.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\EAS2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ILR2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ILRValidationMessages2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\FISReferenceData2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\REF-ILRLookup2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ACT-Count-Report2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-App-Summarisation2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Collection-Stats2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsAdditionalPaymentsReport2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsCoInvestmentContributionsReport2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsDataMatchMonthEndReport2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsInternalDataMatchMonthEndReport2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsMonthlyPaymentReport2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-CrossYearPaymentsReport2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-FundingSummaryPeriodEndReport2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-PeriodEndReportPreparation2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Reports-Finished2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Run2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Start2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Stop2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Submission2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-SubmissionWindowPeriodValidation2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DataExtract-Report2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DataQuality-Report2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Data-Warehouse12122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Data-Warehouse22122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DC-Summarisation2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ESFANonContDevolvedAdultEducationReport2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ESF-Summarisation2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-MCA-Reports2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Metrics-Report2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ProviderSubmissions-Report2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-StandardFile2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-UYP-LLVReport2122.sql" />
+    <None Include="Collections_ReferenceData\Scripts\MCAFundedAims.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="zzDeploymentProfiles\zz.Local.Dev.Version.publish.xml" />
+    <None Include="ReferenceData\JobStatusType.sql" />
+    <None Include="z.ExtendedProperties.sql" />
+    <None Include="zzDeploymentProfiles\ESFA.DC.JobQueueManager.My.Database.publish.xml" />
+    <None Include="DBRefactor\UpdateUkprn_OrganisationCollection.sql" />
+    <None Include="DBRefactor\Add_ESF_ContractReferenceNumber.sql" />
+    <None Include="zz.Remove.Old.Objects.sql" />
+    <Build Include="dbo\Stored Procedures\GetJobsThatAreQueued.sql" />
+    <Build Include="dbo\Stored Procedures\GetLatestNCSJobPerPeriod.sql" />
+    <Build Include="dbo\Stored Procedures\GetAllSuccessfulJobsPerCollectionTypePerPeriod.sql" />
+    <None Include="DBRefactor\Update_PE_CollectionTypes.sql" />
+    <None Include="Collections_ReferenceData\Scripts\REF-LARS.sql" />
+    <None Include="Collections_ReferenceData\Scripts\REF-LARSIndex.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <DataScriptsPre Include="Collections_ReferenceData\Pre\CreateTempTables.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\1819-Final.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\1819-YearEnd.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\1920-Final.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\1920-MidYear.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\2021-MidYear.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\2021-YearEnd.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ALLF.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\CampusIdentifier.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\CoFRemoval.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\COVID19.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\COVIDRelief2.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\DEA-Reports1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\DevolvedContracts.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\DevolvedPostcodes-FullName.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\DevolvedPostcodes-LocalAuthority.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\DevolvedPostcodes-OnsOverride.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\DevolvedPostcodes-Sof.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\DevolvedPostcodesPublication.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\EAS1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\EAS1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\EAS2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ESF-Reprofiling.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\EsfEligibility.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ESFR1.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ESFR2-1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ESFR2-1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ESFR2-2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ESFR2-2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\FISReferenceData2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\FRM-Reports1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\FRM-Reports2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ILR1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ILR1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ILR2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ILRValidationMessages1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ILRValidationMessages2021.sql" />
+	<Scripts Include="Collections_ReferenceData\Scripts\MCAFundedAims.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\NCS1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\NCS2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\NcsOutcomeRates.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OnsPostcodes.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-2021-MidYear-FundingClaimsDataExtract-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-2021-MidYear-FundingClaimsProviderSubmission-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-2021-MidYear-FundingClaimsSavedButNotSubmitted-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-2021-YearEnd-FundingClaimsDataExtract-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-2021-YearEnd-FundingClaimsSavedButNotSubmitted-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-2021-YearEnd_FC_ProvSubReport.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-FundingClaimsExtractData1920-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-FundingClaimsProviderSubmission1920-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-ILRFileSubmissionsPerDay-Report1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-ILRFileSubmissionsPerDay-Report2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-ILRProvidersReturningFirstTimePerDay-Report1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-ILRProvidersReturningFirstTimePerDay-Report2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\OP-Validation-Report.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\Organisations.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ACT-Count-Report1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ACT-Count-Report2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ALLF-Summarisation.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-App-Summarisation1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-App-Summarisation1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-App-Summarisation2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Collection-Stats1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Collection-Stats2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsAdditionalPaymentsReport1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsAdditionalPaymentsReport2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsCoInvestmentContributionsReport1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsCoInvestmentContributionsReport2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsDataMatchMonthEndReport1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsDataMatchMonthEndReport2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsInternalDataMatchMonthEndReport1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsInternalDataMatchMonthEndReport2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsMonthlyPaymentReport1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-AppsMonthlyPaymentReport2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-CrossYearPaymentsReport2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-FundingSummaryPeriodEndReport1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-FundingSummaryPeriodEndReport2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-PeriodEndReport1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-PeriodEndReportPreparation1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-PeriodEndReportPreparation2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Reports-Finished1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Reports-Finished2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Run1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Run1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Run2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Start1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Start1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Start2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Stop1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Stop1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Stop2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Submission1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Submission1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-Submission2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-SubmissionWindowPeriodValidation1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DAS-SubmissionWindowPeriodValidation2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Data-Warehouse11920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Data-Warehouse12021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Data-Warehouse21920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Data-Warehouse22021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DataExtract-Report1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DataExtract-Report2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DataQuality-Report1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DataQuality-Report2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DC-Summarisation1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DC-Summarisation1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-DC-Summarisation2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ESF-Summarisation1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ESF-Summarisation1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ESF-Summarisation2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ESFANonContDevolvedAdultEducationReport1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ESFANonContDevolvedAdultEducationReport2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-MCA-Reports1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-MCA-Reports2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-NCS-DataExtract-Report2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-NCS-DataExtract-Report2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-NCS-Summarisation2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-NCS-Summarisation2122.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ProviderSubmissions-Report1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-ProviderSubmissions-Report2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-StandardFile1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-StandardFile2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-UYP-LLVReport1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-UYP-LLVReport2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ProviderPostcodeSpecialistResources.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\REF-EDRS.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\REF-EPA.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\REF-ESF.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\REF-FCS.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\REF-LARS.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\REF-LARSIndex.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\REF-OPS.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\REF-ULN.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\ShortTermFundingInitiatives.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Metrics-Report1819.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Metrics-Report1920.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\PE-Metrics-Report2021.sql" />
+    <Scripts Include="Collections_ReferenceData\Scripts\_Common.sql" />
+    <DataScriptsPost1 Include="Collections_ReferenceData\Post\Merge_Collection.sql" />
+    <DataScriptsPost2 Include="Collections_ReferenceData\Post\Merge_ReturnPeriod.sql" />
+    <DataScriptsPost3 Include="Collections_ReferenceData\Post\Merge_JobTopicTaskSubscription.sql" />
+    <DataScriptsPost4 Include="Collections_ReferenceData\Post\Merge_JobEmailTemplate.sql" />
+    <DataScriptsPost5 Include="Collections_ReferenceData\Post\Merge_CollectionRelatedLink.sql" />
+    <DataScriptsPost6 Include="Collections_ReferenceData\Post\Merge_ScheduleJobs.sql" />
+    <DataScriptsPost7 Include="Collections_ReferenceData\Post\Merge_ValidityPeriods.sql" />
+    <DataScriptsPost8 Include="Collections_ReferenceData\Post\Merge_JobMessageKey.sql" />
+    <DataScriptsOverrides Include="Collections_ReferenceData\Overrides\*.sql" />
+  </ItemGroup>
+  <Target AfterTargets="BeforeBuild" Name="CreateDataScript">
+    <Delete Files="zzCollectionsDataScript.sql" />
+    <WriteLinesToFile Overwrite="false" File="zzCollectionsDataScript.sql" Lines=":r .\%(DataScriptsPre.Identity)" />
+    <WriteLinesToFile Overwrite="false" File="zzCollectionsDataScript.sql" Lines=":r .\%(Scripts.Identity)" />
+    <WriteLinesToFile Overwrite="false" File="zzCollectionsDataScript.sql" Lines=":r .\%(DataScriptsPost1.Identity)" />
+    <WriteLinesToFile Overwrite="false" File="zzCollectionsDataScript.sql" Lines=":r .\%(DataScriptsPost2.Identity)" />
+    <WriteLinesToFile Overwrite="false" File="zzCollectionsDataScript.sql" Lines=":r .\%(DataScriptsPost3.Identity)" />
+    <WriteLinesToFile Overwrite="false" File="zzCollectionsDataScript.sql" Lines=":r .\%(DataScriptsPost4.Identity)" />
+    <WriteLinesToFile Overwrite="false" File="zzCollectionsDataScript.sql" Lines=":r .\%(DataScriptsPost5.Identity)" />
+    <WriteLinesToFile Overwrite="false" File="zzCollectionsDataScript.sql" Lines=":r .\%(DataScriptsPost6.Identity)" />
+    <WriteLinesToFile Overwrite="false" File="zzCollectionsDataScript.sql" Lines=":r .\%(DataScriptsPost7.Identity)" />
+    <WriteLinesToFile Overwrite="false" File="zzCollectionsDataScript.sql" Lines=":r .\%(DataScriptsPost8.Identity)" />
+    <WriteLinesToFile Overwrite="false" File="zzCollectionsDataScript.sql" Lines=":r .\%(DataScriptsOverrides.Identity)" />
+  </Target>
+  <ItemGroup>
+    <SqlCmdVariable Include="BUILD_BRANCHNAME">
+      <DefaultValue>xxx.xxx.xxx</DefaultValue>
+      <Value>$(SqlCmdVar__3)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="BUILD_BUILDNUMBER">
+      <DefaultValue>yyy.yyy.yyy</DefaultValue>
+      <Value>$(SqlCmdVar__2)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="DsciUserPassword">
+      <DefaultValue>NotUsedlocally3</DefaultValue>
+      <Value>$(SqlCmdVar__8)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="JobManagementApiUserPwd">
+      <DefaultValue>NotUsedlocally1</DefaultValue>
+      <Value>$(SqlCmdVar__7)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="JobManagementSchedulerUserPwd">
+      <DefaultValue>NotUsedlocally2</DefaultValue>
+      <Value>$(SqlCmdVar__6)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="RELEASE_RELEASENAME">
+      <DefaultValue>LocalRelease</DefaultValue>
+      <Value>$(SqlCmdVar__4)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="ROUserPassword">
+      <DefaultValue>NotUsedlocally4</DefaultValue>
+      <Value>$(SqlCmdVar__9)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="zzz.Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="ESFA.DC.JobQueueManager.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="zz.Script.PreDeployment.sql" />
+  </ItemGroup>
+</Project>
