@@ -1,0 +1,31 @@
+﻿
+--CREATE VIEW [dbo].[vw_ProviderSubmissions]
+--AS 
+--SELECT TOP 100 PERCENT
+--       FUJMD.[Ukprn]
+--      ,JT.[Description]
+--      ,J.[JobType]
+--      ,JST.[StatusDescription]
+--      ,J.[Status]
+--      ,FUJMD.[IsFirstStage]
+--      ,FUJMD.[CollectionName]
+--      ,FUJMD.[PeriodNumber]
+--      ,J.[CrossLoadingStatus]
+--	  ,COUNT(*) AS [SubmissionCount]
+--FROM [dbo].[Job] AS J
+--INNER JOIN [dbo].[JobStatusType] AS JST
+--   ON JST.[StatusId] = J.[Status]
+--INNER JOIN [dbo].[JobType] AS JT
+--   ON JT.[JobTypeId] = J.[JobType]
+--LEFT JOIN [dbo].[FileUploadJobMetaData] FUJMD
+--	ON J.[JobId] = FUJMD.[JobId]
+--GROUP BY  [Ukprn]    
+--      ,JT.[Description]
+--      ,J.[JobType]
+--      ,JST.[StatusDescription]
+--      ,J.[Status]
+--      ,FUJMD.[IsFirstStage]
+--      ,FUJMD.[CollectionName]
+--      ,FUJMD.[PeriodNumber]
+--      ,J.[CrossLoadingStatus]
+--ORDER BY [Description], [Ukprn],[IsFirstStage] DESC, [StatusDescription], [SubmissionCount]
