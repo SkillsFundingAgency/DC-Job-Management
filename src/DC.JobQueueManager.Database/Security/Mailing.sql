@@ -1,0 +1,2 @@
+﻿CREATE SCHEMA [Mailing] 
+	AUTHORIZATION [dbo];
