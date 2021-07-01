@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <CodeAnalysisRuleSet>..\ESFA.DC.JobManagement.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ESFA.DC.JobContext" Version="0.1.16-beta0001" />
+    <PackageReference Include="ESFA.DC.JobContext.Interface" Version="0.1.16-beta0001" />
+    <PackageReference Include="ESFA.DC.Logging" Version="0.1.10-beta0001" />
+    <PackageReference Include="ESFA.DC.Logging.Interfaces" Version="0.1.10-beta0001" />
+    <PackageReference Include="FluentAssertions" Version="5.10.2" />
+    <PackageReference Include="MockQueryable.Moq" Version="3.1.3" />
+    <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DC.JobQueueManager.Interfaces\ESFA.DC.JobQueueManager.Interfaces.csproj" />
+    <ProjectReference Include="..\DC.JobQueueManager\ESFA.DC.JobQueueManager.csproj" />
+    <ProjectReference Include="..\ESFA.DC.PeriodEnd.DataAccess\ESFA.DC.PeriodEnd.DataAccess.csproj" />
+    <ProjectReference Include="..\ESFA.DC.PeriodEnd.Interfaces\ESFA.DC.PeriodEnd.Interfaces.csproj" />
+    <ProjectReference Include="..\ESFA.DC.PeriodEnd.Services.ILR\ESFA.DC.PeriodEnd.Services.ILR.csproj" />
+    <ProjectReference Include="..\ESFA.DC.PeriodEnd.Services\ESFA.DC.PeriodEnd.Services.csproj" />
+  </ItemGroup>
+
+</Project>
