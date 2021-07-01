@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "n6rR01FfpGDecpZMgfQk51qbDF0XNqvjxnouuxuJyjcJtWk+V/QrmgXDMV+0sEMYv9bz3zncXY0PiBokfdgmlw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.JobScheduler.Interfaces\\ESFA.DC.JobScheduler.Interfaces.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\russell\\.nuget\\packages\\esfa.dc.jobcontext\\0.1.16-beta0001\\esfa.dc.jobcontext.0.1.16-beta0001.nupkg.sha512",
+    "C:\\Users\\russell\\.nuget\\packages\\esfa.dc.jobcontext.interface\\0.1.16-beta0001\\esfa.dc.jobcontext.interface.0.1.16-beta0001.nupkg.sha512",
+    "C:\\Users\\russell\\.nuget\\packages\\esfa.dc.mapping.interface\\0.1.0-beta0001\\esfa.dc.mapping.interface.0.1.0-beta0001.nupkg.sha512",
+    "C:\\Users\\russell\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\russell\\.nuget\\packages\\microsoft.visualstudio.threading.analyzers\\16.0.102\\microsoft.visualstudio.threading.analyzers.16.0.102.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\russell\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
+  ],
+  "logs": []
+}
