@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "eVDRYDnAOEx29fKOGX5EeXZbg3N7e3y66/GtI98TJ3/6Yd8mn81hf54LFqBp6zzV9muitY2OOZw2mx57V6YKKA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\russell\\Source\\Repos\\DC-Job-Management_master\\src\\ESFA.DC.Data.Models\\ESFA.DC.Data.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\russell\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\russell\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
+  ],
+  "logs": []
+}
